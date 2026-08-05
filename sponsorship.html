@@ -148,6 +148,11 @@
     border-bottom: 2px solid transparent;
     transition: border-color 0.2s, color 0.2s;
   }
+  @media (max-width: 480px) {
+    .navlinks { gap: 0.6rem; }
+    .navlinks a { font-size: 0.72rem; letter-spacing: 0.01em; padding: 0.25rem 0; }
+    .navlinks .current { font-size: 0.72rem; letter-spacing: 0.01em; padding: 0.25rem 0; }
+  }
   .navlinks a:hover, .navlinks a:focus-visible {
     color: var(--gold-bright);
     border-color: var(--gold-bright);
