@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://yuridai50th.hyappo.co.jp/sitemap.xml
