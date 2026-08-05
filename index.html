@@ -464,6 +464,13 @@
     gap: 0.5rem;
   }
   .notice-heading { margin: 0 0 1rem; font-weight: 700; color: var(--ink); }
+  .volunteer-flex { display: flex; gap: 1.5rem; align-items: flex-start; flex-wrap: wrap; }
+  .volunteer-illustration { width: 150px; flex-shrink: 0; margin: 0 auto; }
+  .volunteer-text { flex: 1 1 260px; min-width: 0; }
+  @media (max-width: 480px) {
+    .volunteer-flex { justify-content: center; text-align: center; }
+    .volunteer-text { text-align: left; }
+  }
 
   .notice-box {
     margin-top: 2.5rem;
@@ -943,14 +950,58 @@
     </div>
 
     <div class="notice-box">
-      <p class="notice-heading">ボランティアスタッフ募集</p>
-      <p class="wrap-phrase" style="color:var(--ink-soft);"><span>百合台祭りでは、</span><span>当日を一緒に</span><span>盛り上げてくださる</span><span>ボランティアスタッフを</span><span>募集しています。</span></p>
-      <ul class="notice-list" style="margin-top:0.9rem;">
-        <li>イベント運営のお手伝い</li>
-        <li>出店のお手伝い</li>
-        <li>イベント翌日のゴミ拾い</li>
-      </ul>
-      <p class="wrap-phrase" style="margin-top:0.9rem;color:var(--ink-soft);font-size:0.92rem;"><span>ご興味のある方は、</span><span>下記の</span><span>百合台祭り実行委員会（毛利）まで</span><span>ご連絡ください。</span></p>
+      <div class="volunteer-flex">
+        <svg class="volunteer-illustration" viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="法被姿の子どもたちのイラスト">
+          <circle cx="34" cy="24" r="3" fill="var(--gold-bright)" />
+          <circle cx="168" cy="30" r="2.4" fill="var(--vermillion)" />
+          <circle cx="180" cy="70" r="2.8" fill="var(--gold-bright)" />
+          <circle cx="18" cy="80" r="2.4" fill="var(--vermillion)" />
+
+          <ellipse cx="56" cy="132" rx="12" ry="19" fill="var(--ink)" />
+          <line x1="82" y1="88" x2="63" y2="107" stroke="var(--vermillion)" stroke-width="11" stroke-linecap="round" />
+          <circle cx="60" cy="110" r="7" fill="#F2C9A1" />
+          <line x1="70" y1="86" x2="88" y2="62" stroke="var(--vermillion)" stroke-width="11" stroke-linecap="round" />
+          <circle cx="90" cy="58" r="7" fill="#F2C9A1" />
+          <rect x="46" y="82" width="40" height="42" rx="15" fill="var(--vermillion)" />
+          <rect x="46" y="97" width="40" height="7" fill="var(--gold-bright)" />
+          <circle cx="66" cy="60" r="20" fill="#F2C9A1" />
+          <path d="M46,58 A20,20 0 0 1 86,58 L86,50 A20,14 0 0 0 46,50 Z" fill="var(--ink)" />
+          <rect x="47" y="52" width="38" height="5.5" rx="2" fill="var(--vermillion)" />
+          <polygon points="83,52 92,54.5 83,57" fill="var(--vermillion)" />
+          <circle cx="59" cy="63" r="1.6" fill="var(--ink)" />
+          <circle cx="73" cy="63" r="1.6" fill="var(--ink)" />
+          <circle cx="56" cy="68" r="3" fill="var(--vermillion)" opacity="0.35" />
+          <circle cx="76" cy="68" r="3" fill="var(--vermillion)" opacity="0.35" />
+          <path d="M60,70 Q66,74 72,70" fill="none" stroke="var(--ink)" stroke-width="1.4" stroke-linecap="round" />
+
+          <ellipse cx="140" cy="136" rx="13" ry="18" fill="var(--ink)" />
+          <line x1="118" y1="92" x2="100" y2="110" stroke="var(--gold-bright)" stroke-width="11" stroke-linecap="round" />
+          <circle cx="98" cy="113" r="7" fill="#F2C9A1" />
+          <line x1="128" y1="90" x2="140" y2="64" stroke="var(--gold-bright)" stroke-width="11" stroke-linecap="round" />
+          <circle cx="142" cy="60" r="7" fill="#F2C9A1" />
+          <rect x="118" y="86" width="44" height="44" rx="16" fill="var(--gold-bright)" />
+          <rect x="118" y="102" width="44" height="7" fill="var(--vermillion)" />
+          <circle cx="140" cy="62" r="21" fill="#F2C9A1" />
+          <path d="M119,60 A21,21 0 0 1 161,60 L161,51 A21,15 0 0 0 119,51 Z" fill="var(--ink)" />
+          <rect x="120" y="54" width="40" height="5.5" rx="2" fill="var(--gold-bright)" />
+          <polygon points="157,54 166,56.5 157,59" fill="var(--gold-bright)" />
+          <circle cx="133" cy="65" r="1.6" fill="var(--ink)" />
+          <circle cx="147" cy="65" r="1.6" fill="var(--ink)" />
+          <circle cx="130" cy="70" r="3" fill="var(--vermillion)" opacity="0.35" />
+          <circle cx="150" cy="70" r="3" fill="var(--vermillion)" opacity="0.35" />
+          <path d="M134,72 Q140,77 146,72" fill="none" stroke="var(--ink)" stroke-width="1.4" stroke-linecap="round" />
+        </svg>
+        <div class="volunteer-text">
+          <p class="notice-heading">ボランティアスタッフ募集</p>
+          <p class="wrap-phrase" style="color:var(--ink-soft);"><span>百合台祭りでは、</span><span>当日を一緒に</span><span>盛り上げてくださる</span><span>ボランティアスタッフを</span><span>募集しています。</span></p>
+          <ul class="notice-list" style="margin-top:0.9rem;">
+            <li>イベント運営のお手伝い</li>
+            <li>出店のお手伝い</li>
+            <li>イベント翌日のゴミ拾い</li>
+          </ul>
+          <p class="wrap-phrase" style="margin-top:0.9rem;color:var(--ink-soft);font-size:0.92rem;"><span>ご興味のある方は、</span><span>下記の</span><span>百合台祭り実行委員会（毛利）まで</span><span>ご連絡ください。</span></p>
+        </div>
+      </div>
     </div>
 
     <div class="notice-box">
