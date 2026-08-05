@@ -479,6 +479,11 @@
   .notice-box dl { display: grid; grid-template-columns: max-content 1fr; gap: 0.6rem 1.5rem; margin: 0; }
   .notice-box dt { color: var(--ink-soft); font-size: 0.88rem; white-space: nowrap; }
   .notice-box dd { margin: 0; }
+  @media (max-width: 600px) {
+    .notice-box dl { grid-template-columns: 1fr; gap: 0.2rem 0; }
+    .notice-box dt { white-space: normal; margin-top: 0.9rem; }
+    .notice-box dt:first-child { margin-top: 0; }
+  }
 
   .donor-preview { margin-top: 2.5rem; }
   .donor-preview-label {
@@ -489,12 +494,16 @@
     padding-left: 0.75rem;
   }
   .donor-tier { margin-top: 1.6rem; }
-  .donor-tier h3 {
-    font-size: 0.95rem;
-    color: var(--gold);
-    margin-bottom: 0.75rem;
-    letter-spacing: 0.05em;
+  .donor-banner-grid { display: grid; gap: 1.1rem; }
+  .donor-banner-grid--2 { grid-template-columns: repeat(2, 1fr); }
+  .donor-banner-grid--4 { grid-template-columns: repeat(4, 1fr); }
+  @media (max-width: 860px) { .donor-banner-grid--4 { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 480px) { .donor-banner-grid--2, .donor-banner-grid--4 { grid-template-columns: 1fr; } }
+  .donor-banner--featured {
+    border-color: var(--gold-bright);
+    background: rgba(201, 154, 30, 0.06);
   }
+  .donor-banner--featured .sponsor-name { font-size: 1.1rem; font-weight: 700; }
   .donor-names { display: flex; flex-wrap: wrap; gap: 0.6rem; margin: 0; padding: 0; list-style: none; }
   .donor-names li {
     background: var(--card);
@@ -503,13 +512,6 @@
     padding: 0.4rem 1rem;
     font-size: 0.92rem;
     color: var(--ink);
-  }
-  .donor-names--featured li {
-    font-size: 1.05rem;
-    font-weight: 700;
-    border-color: var(--gold-bright);
-    background: rgba(201, 154, 30, 0.08);
-    padding: 0.55rem 1.3rem;
   }
   .donor-names--compact li {
     font-size: 0.85rem;
@@ -892,19 +894,19 @@
     <div class="map-card">
       <svg viewBox="0 0 800 460" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="会場配置イメージ図">
         <rect x="30" y="30" width="740" height="80" fill="var(--ink-soft)" opacity="0.15" stroke="var(--line)" />
-        <text x="400" y="76" text-anchor="middle" font-family="'Hiragino Kaku Gothic ProN','Yu Gothic',sans-serif" font-size="20" fill="var(--ink-soft)">校舎</text>
+        <text x="400" y="80" text-anchor="middle" font-family="'Hiragino Kaku Gothic ProN','Yu Gothic',sans-serif" font-size="34" fill="var(--ink-soft)">校舎</text>
 
         <rect x="30" y="130" width="740" height="300" fill="none" stroke="var(--line)" stroke-width="2" />
 
         <rect x="70" y="170" width="220" height="90" rx="6" fill="var(--gold-bright)" opacity="0.18" stroke="var(--gold-bright)" stroke-width="2" />
-        <text x="180" y="210" text-anchor="middle" font-family="'Hiragino Kaku Gothic ProN','Yu Gothic',sans-serif" font-size="18" fill="var(--ink)">ステージ</text>
-        <text x="180" y="234" text-anchor="middle" font-family="'Hiragino Kaku Gothic ProN','Yu Gothic',sans-serif" font-size="13" fill="var(--ink-soft)">（ダンス・演奏）</text>
+        <text x="180" y="212" text-anchor="middle" font-family="'Hiragino Kaku Gothic ProN','Yu Gothic',sans-serif" font-size="30" fill="var(--ink)">ステージ</text>
+        <text x="180" y="240" text-anchor="middle" font-family="'Hiragino Kaku Gothic ProN','Yu Gothic',sans-serif" font-size="20" fill="var(--ink-soft)">（ダンス・演奏）</text>
 
         <rect x="70" y="290" width="150" height="80" rx="6" fill="var(--vermillion)" opacity="0.14" stroke="var(--vermillion)" stroke-width="2" />
-        <text x="145" y="335" text-anchor="middle" font-family="'Hiragino Kaku Gothic ProN','Yu Gothic',sans-serif" font-size="16" fill="var(--ink)">本部・受付</text>
+        <text x="145" y="338" text-anchor="middle" font-family="'Hiragino Kaku Gothic ProN','Yu Gothic',sans-serif" font-size="27" fill="var(--ink)">本部・受付</text>
 
-        <rect x="330" y="170" width="400" height="200" rx="8" fill="none" stroke="var(--line)" stroke-width="2" stroke-dasharray="6 6" />
-        <text x="530" y="192" text-anchor="middle" font-family="'Hiragino Kaku Gothic ProN','Yu Gothic',sans-serif" font-size="15" fill="var(--gold)">模擬店エリア</text>
+        <rect x="330" y="170" width="400" height="200" rx="8" fill="none" stroke="var(--line)" stroke-width="2.5" stroke-dasharray="6 6" />
+        <text x="530" y="198" text-anchor="middle" font-family="'Hiragino Kaku Gothic ProN','Yu Gothic',sans-serif" font-size="26" fill="var(--gold)">模擬店エリア</text>
         <g fill="var(--card)" stroke="var(--ink-soft)" stroke-width="1.5">
           <rect x="350" y="210" width="80" height="55" rx="4" />
           <rect x="450" y="210" width="80" height="55" rx="4" />
@@ -916,7 +918,7 @@
         </g>
 
         <polygon points="380,430 420,430 400,400" fill="var(--vermillion)" />
-        <text x="400" y="450" text-anchor="middle" font-family="'Hiragino Kaku Gothic ProN','Yu Gothic',sans-serif" font-size="15" fill="var(--ink)">入口</text>
+        <text x="400" y="453" text-anchor="middle" font-family="'Hiragino Kaku Gothic ProN','Yu Gothic',sans-serif" font-size="26" fill="var(--ink)">入口</text>
       </svg>
       <p class="disclaimer">※ 会場配置は現時点のイメージ図です。詳しい配置は当日の掲示にてご案内します。</p>
     </div>
@@ -1008,32 +1010,29 @@
       <p class="donor-preview-label">※ 以下は掲載イメージのサンプルです（すべて架空のお名前です）</p>
 
       <div class="donor-tier">
-        <h3>特別協賛</h3>
-        <ul class="donor-names donor-names--featured">
-          <li>株式会社サンライズ物産</li>
-          <li>千葉中央信用金庫</li>
-          <li>株式会社グリーンフィールド</li>
-        </ul>
+        <div class="donor-banner-grid donor-banner-grid--2">
+          <div class="sponsor-banner sponsor-banner--text donor-banner--featured"><span class="sponsor-name">株式会社サンライズ物産</span></div>
+          <div class="sponsor-banner sponsor-banner--text donor-banner--featured"><span class="sponsor-name">千葉中央信用金庫</span></div>
+          <div class="sponsor-banner sponsor-banner--text donor-banner--featured"><span class="sponsor-name">株式会社グリーンフィールド</span></div>
+        </div>
       </div>
 
       <div class="donor-tier">
-        <h3>一般協賛</h3>
-        <ul class="donor-names">
-          <li>有限会社まるやま商店</li>
-          <li>カフェ・ド・ゆりの木</li>
-          <li>百合台整骨院</li>
-          <li>とんかつ大将</li>
-          <li>スタジオぷりずむ</li>
-          <li>美容室Lien</li>
-          <li>学習塾みらい進学会</li>
-          <li>パン工房こむぎ</li>
-          <li>花屋フルール</li>
-          <li>有限会社ひまわり工務店</li>
-        </ul>
+        <div class="donor-banner-grid donor-banner-grid--4">
+          <div class="sponsor-banner sponsor-banner--text"><span class="sponsor-name">有限会社まるやま商店</span></div>
+          <div class="sponsor-banner sponsor-banner--text"><span class="sponsor-name">カフェ・ド・ゆりの木</span></div>
+          <div class="sponsor-banner sponsor-banner--text"><span class="sponsor-name">百合台整骨院</span></div>
+          <div class="sponsor-banner sponsor-banner--text"><span class="sponsor-name">とんかつ大将</span></div>
+          <div class="sponsor-banner sponsor-banner--text"><span class="sponsor-name">スタジオぷりずむ</span></div>
+          <div class="sponsor-banner sponsor-banner--text"><span class="sponsor-name">美容室Lien</span></div>
+          <div class="sponsor-banner sponsor-banner--text"><span class="sponsor-name">学習塾みらい進学会</span></div>
+          <div class="sponsor-banner sponsor-banner--text"><span class="sponsor-name">パン工房こむぎ</span></div>
+          <div class="sponsor-banner sponsor-banner--text"><span class="sponsor-name">花屋フルール</span></div>
+          <div class="sponsor-banner sponsor-banner--text"><span class="sponsor-name">有限会社ひまわり工務店</span></div>
+        </div>
       </div>
 
       <div class="donor-tier">
-        <h3>個人協賛</h3>
         <ul class="donor-names donor-names--compact">
           <li>佐藤 花子</li>
           <li>鈴木 太郎</li>
