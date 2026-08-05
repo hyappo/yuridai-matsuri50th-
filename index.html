@@ -437,6 +437,43 @@
   .notice-box dt { color: var(--ink-soft); font-size: 0.88rem; white-space: nowrap; }
   .notice-box dd { margin: 0; }
 
+  .donor-preview { margin-top: 2.5rem; }
+  .donor-preview-label {
+    font-size: 0.82rem;
+    color: var(--ink-soft);
+    margin-bottom: 1.5rem;
+    border-left: 3px dashed var(--line);
+    padding-left: 0.75rem;
+  }
+  .donor-tier { margin-top: 1.6rem; }
+  .donor-tier h3 {
+    font-size: 0.95rem;
+    color: var(--gold);
+    margin-bottom: 0.75rem;
+    letter-spacing: 0.05em;
+  }
+  .donor-names { display: flex; flex-wrap: wrap; gap: 0.6rem; margin: 0; padding: 0; list-style: none; }
+  .donor-names li {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    padding: 0.4rem 1rem;
+    font-size: 0.92rem;
+    color: var(--ink);
+  }
+  .donor-names--featured li {
+    font-size: 1.05rem;
+    font-weight: 700;
+    border-color: var(--gold-bright);
+    background: rgba(201, 154, 30, 0.08);
+    padding: 0.55rem 1.3rem;
+  }
+  .donor-names--compact li {
+    font-size: 0.85rem;
+    padding: 0.3rem 0.85rem;
+    color: var(--ink-soft);
+  }
+
   /* ---------- Program ---------- */
   .program-grid {
     display: grid;
@@ -873,7 +910,7 @@
       <p class="wrap-phrase" style="margin:0 0 1rem;color:var(--ink-soft);"><span>百合台祭りは、</span><span>百合台祭り実行委員会</span><span>（PTA・地域有志による</span><span>任意団体）が</span><span>運営しております。</span><br><span>本行事は</span><span>百合台小学校の</span><span>主催事業では</span><span>ございませんので、</span><span>恐れ入りますが</span><span>学校への</span><span>直接のお問い合わせは</span><span>ご遠慮くださいますよう</span><span>お願いいたします。</span></p>
       <dl class="wrap-phrase">
         <dt>全体・式典に関するお問い合わせ</dt>
-        <dd><a href="https://docs.google.com/forms/d/e/1FAIpQLSfiK0y9RpSjYo2LSxc21f4wDYZZ8RbSkNB2P2O3m3174SnsJw/viewform" target="_blank" rel="noopener noreferrer" style="color:var(--vermillion);">お問い合わせ用Googleフォームを開く</a></dd>
+        <dd><a href="https://docs.google.com/forms/d/e/1FAIpQLSfiK0y9RpSjYo2LSxc21f4wDYZZ8RbSkNB2P2O3m3174SnsJw/viewform" target="_blank" rel="noopener noreferrer" style="color:var(--vermillion);">お問い合わせはこちらに</a></dd>
         <dt>百合台祭り当日の進行に関するお問い合わせ</dt>
         <dd>
           <span>百合台祭り実行委員会（毛利）</span><br>
@@ -921,6 +958,61 @@
 
     <div class="notice-box">
       <p style="margin:0;color:var(--ink-soft);font-size:0.95rem;" class="wrap-phrase"><span>上記以外にも</span><span>ご協賛いただいた</span><span>企業・団体・個人の</span><span>皆さまのお名前を、</span><span>決定次第</span><span>順次こちらに</span><span>掲載してまいります。</span></p>
+    </div>
+
+    <div class="donor-preview">
+      <p class="donor-preview-label">※ 以下は掲載イメージのサンプルです（すべて架空のお名前です）</p>
+
+      <div class="donor-tier">
+        <h3>特別協賛</h3>
+        <ul class="donor-names donor-names--featured">
+          <li>株式会社サンライズ物産</li>
+          <li>千葉中央信用金庫</li>
+          <li>株式会社グリーンフィールド</li>
+        </ul>
+      </div>
+
+      <div class="donor-tier">
+        <h3>一般協賛</h3>
+        <ul class="donor-names">
+          <li>有限会社まるやま商店</li>
+          <li>カフェ・ド・ゆりの木</li>
+          <li>百合台整骨院</li>
+          <li>とんかつ大将</li>
+          <li>スタジオぷりずむ</li>
+          <li>美容室Lien</li>
+          <li>学習塾みらい進学会</li>
+          <li>パン工房こむぎ</li>
+          <li>花屋フルール</li>
+          <li>有限会社ひまわり工務店</li>
+        </ul>
+      </div>
+
+      <div class="donor-tier">
+        <h3>個人協賛</h3>
+        <ul class="donor-names donor-names--compact">
+          <li>佐藤 花子</li>
+          <li>鈴木 太郎</li>
+          <li>高橋 美咲</li>
+          <li>田中 健一</li>
+          <li>伊藤 由美</li>
+          <li>渡辺 直樹</li>
+          <li>山本 恵子</li>
+          <li>中村 大輔</li>
+          <li>小林 幸子</li>
+          <li>加藤 誠</li>
+          <li>吉田 真理</li>
+          <li>山田 隆</li>
+          <li>佐々木 あゆみ</li>
+          <li>山口 修</li>
+          <li>松本 陽子</li>
+          <li>井上 拓也</li>
+          <li>木村 さくら</li>
+          <li>林 一郎</li>
+          <li>斎藤 久美子</li>
+          <li>清水 健太</li>
+        </ul>
+      </div>
     </div>
 
     <div style="margin-top: 2.5rem; text-align: center;">
