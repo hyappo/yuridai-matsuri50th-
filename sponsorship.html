@@ -1,0 +1,949 @@
+<title>協賛について｜百合台小学校 創立50周年記念式典・お祭り</title>
+<style>
+  :root {
+    --bg: #F5EFDF;
+    --bg-alt: #EBE0C6;
+    --card: #FFFDF6;
+    --ink: #24313F;
+    --ink-soft: #5B6570;
+    --gold: #AD8016;
+    --gold-bright: #C99A1E;
+    --vermillion: #B23A24;
+    --indigo: #1F3350;
+    --indigo-deep: #16273D;
+    --line: rgba(31, 51, 80, 0.16);
+    --shadow: 0 12px 30px rgba(31, 51, 80, 0.10);
+  }
+
+  :root[data-theme="dark"] {
+    --bg: #131E2A;
+    --bg-alt: #192637;
+    --card: #1B2A3D;
+    --ink: #F1E9D6;
+    --ink-soft: #AEB9C4;
+    --gold: #E8C155;
+    --gold-bright: #F0D488;
+    --vermillion: #E2694A;
+    --indigo: #0E1926;
+    --indigo-deep: #0A121C;
+    --line: rgba(241, 233, 214, 0.16);
+    --shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #131E2A;
+      --bg-alt: #192637;
+      --card: #1B2A3D;
+      --ink: #F1E9D6;
+      --ink-soft: #AEB9C4;
+      --gold: #E8C155;
+      --gold-bright: #F0D488;
+      --vermillion: #E2694A;
+      --indigo: #0E1926;
+      --indigo-deep: #0A121C;
+      --line: rgba(241, 233, 214, 0.16);
+      --shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+    }
+  }
+
+  * { box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    * { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+  }
+
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: "Yu Gothic Medium", "Yu Gothic", "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
+    line-height: 1.8;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3, .display {
+    font-family: "Yu Mincho", "YuMincho", "Hiragino Mincho ProN", "HG Mincho E", serif;
+    text-wrap: balance;
+    color: var(--ink);
+    margin: 0;
+  }
+
+  a { color: inherit; }
+
+  .tabular { font-variant-numeric: tabular-nums; }
+
+  /* ---------- Nav ---------- */
+  .navbar {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: var(--indigo);
+    border-bottom: 3px solid var(--gold-bright);
+  }
+  .navbar-inner {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 0.75rem 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+  .brand {
+    color: #F1E9D6;
+    font-family: "Yu Mincho", "YuMincho", "Hiragino Mincho ProN", serif;
+    font-size: 0.95rem;
+    letter-spacing: 0.04em;
+  }
+  .brand strong { color: var(--gold-bright); font-size: 1.05rem; }
+  .navlinks {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+    margin: 0 0 0 auto;
+    padding: 0;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+  .navlinks a {
+    text-decoration: none;
+    color: #E4DCC8;
+    font-size: 0.92rem;
+    letter-spacing: 0.03em;
+    padding: 0.3rem 0.1rem;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.2s, color 0.2s;
+  }
+  .navlinks a:hover, .navlinks a:focus-visible {
+    color: var(--gold-bright);
+    border-color: var(--gold-bright);
+    outline: none;
+  }
+
+  /* ---------- Ceremonial band (紅白幕 nod) ---------- */
+  .kohaku-band {
+    height: 14px;
+    background: repeating-linear-gradient(
+      90deg,
+      var(--vermillion) 0, var(--vermillion) 34px,
+      #FFFFFF 34px, #FFFFFF 68px
+    );
+  }
+
+  /* ---------- Bunting divider (祭り旗ガーランド) ---------- */
+  .bunting {
+    height: 30px;
+    background:
+      repeating-linear-gradient(115deg, var(--gold-bright) 0 18px, transparent 18px 36px),
+      repeating-linear-gradient(65deg, var(--vermillion) 0 18px, transparent 18px 36px);
+    background-position: 0 0, 18px 0;
+    background-size: 36px 30px, 36px 30px;
+    background-repeat: repeat-x;
+    mask-image: linear-gradient(180deg, black 60%, transparent 100%);
+    opacity: 0.85;
+  }
+
+  section { padding: 4.5rem 1.5rem; }
+  .section-inner { max-width: 1080px; margin: 0 auto; }
+
+  .eyebrow {
+    display: inline-block;
+    font-size: 0.8rem;
+    letter-spacing: 0.18em;
+    color: var(--gold);
+    border: 1px solid var(--line);
+    padding: 0.25rem 0.75rem;
+    border-radius: 999px;
+    margin-bottom: 1rem;
+  }
+
+  /* ---------- Hero ---------- */
+  .hero {
+    background: linear-gradient(180deg, var(--indigo) 0%, var(--indigo-deep) 100%);
+    color: #F1E9D6;
+    padding: 9rem 1.5rem 0;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero-bg {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+  }
+  .hero-bg svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+  .hero-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background: linear-gradient(180deg,
+      rgba(14, 25, 38, 0.20) 0%,
+      rgba(14, 25, 38, 0.58) 55%,
+      rgba(14, 25, 38, 0.94) 100%);
+  }
+  .hero-inner {
+    position: relative;
+    z-index: 2;
+    max-width: 1080px;
+    margin: 0 auto;
+    padding-bottom: 6rem;
+  }
+  .hero .eyebrow { color: var(--gold-bright); border-color: rgba(224,184,75,0.4); }
+  .hero h1 {
+    font-size: clamp(2.1rem, 4.4vw, 3.4rem);
+    line-height: 1.35;
+    color: #FBF7EA;
+  }
+  .hero h1 em {
+    font-style: normal;
+    color: var(--gold-bright);
+  }
+  .hero p.lead {
+    margin-top: 1.25rem;
+    max-width: 46ch;
+    color: #D7CDB4;
+    font-size: 1.02rem;
+  }
+
+  .hero-actions { display: flex; gap: 1rem; margin-top: 2rem; flex-wrap: wrap; }
+  .btn {
+    display: inline-block;
+    padding: 0.75rem 1.6rem;
+    border-radius: 4px;
+    border: none;
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-family: inherit;
+    letter-spacing: 0.03em;
+    cursor: pointer;
+    transition: transform 0.15s, box-shadow 0.15s;
+  }
+  .btn:focus-visible { outline: 2px solid var(--gold-bright); outline-offset: 2px; }
+  .btn-primary { background: var(--gold-bright); color: #FFFFFF; font-weight: 700; }
+  .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 18px rgba(224,184,75,0.35); }
+  .btn-ghost { border: 1px solid rgba(241,233,214,0.4); color: #F1E9D6; }
+  .btn-ghost:hover { border-color: var(--gold-bright); color: var(--gold-bright); }
+
+  /* ---------- Event info band ---------- */
+  .event-info { padding: 2.75rem 1.5rem; }
+  .event-info-inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+  }
+  .event-info-item { text-align: center; position: relative; padding: 0 1rem; }
+  .event-info-item + .event-info-item::before {
+    content: "";
+    position: absolute;
+    left: -1.5rem;
+    top: 10%;
+    height: 80%;
+    width: 1px;
+    background: var(--line);
+  }
+  @media (max-width: 480px) { .event-info-item + .event-info-item::before { display: none; } }
+  .event-info-item .label {
+    display: block;
+    font-size: 0.8rem;
+    letter-spacing: 0.14em;
+    color: var(--gold);
+    margin-bottom: 0.4rem;
+  }
+  .event-info-item .value {
+    font-family: "Yu Mincho", "YuMincho", "Hiragino Mincho ProN", serif;
+    font-size: 1.35rem;
+    color: var(--ink);
+  }
+
+  /* ---------- Generic section headings ---------- */
+  h2.section-title {
+    font-size: clamp(1.6rem, 3vw, 2.1rem);
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+  }
+  h2.section-title .title-icon { width: 1.7rem; height: 1.7rem; flex-shrink: 0; }
+  .section-lead {
+    color: var(--ink-soft);
+    max-width: 62ch;
+    margin-top: 0.9rem;
+    font-size: 1.02rem;
+    text-wrap: pretty;
+  }
+  .wrap-phrase span {
+    display: inline-block;
+  }
+
+  /* ---------- Sponsorship ---------- */
+  #sponsorship { background: var(--bg-alt); }
+  .goal-banner {
+    display: flex;
+    align-items: baseline;
+    gap: 1rem;
+    flex-wrap: wrap;
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-left: 5px solid var(--vermillion);
+    border-radius: 6px;
+    padding: 1.5rem 1.8rem;
+    margin-top: 2rem;
+    box-shadow: var(--shadow);
+  }
+  .goal-banner .goal-label { font-size: 0.95rem; color: var(--ink-soft); }
+  .goal-banner .goal-amount {
+    font-family: "Yu Mincho", "YuMincho", serif;
+    font-size: 2.4rem;
+    color: var(--vermillion);
+    font-weight: 700;
+  }
+  .goal-banner .goal-note { font-size: 0.88rem; color: var(--ink-soft); margin-left: auto; }
+
+  .tier-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.25rem;
+    margin-top: 2.5rem;
+  }
+  .tier-card {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    padding: 1.6rem 1.5rem;
+    box-shadow: var(--shadow);
+    display: flex;
+    flex-direction: column;
+    gap: 0.9rem;
+  }
+  .tier-card.featured { border-color: var(--gold-bright); box-shadow: 0 12px 30px rgba(184,137,43,0.18); }
+  .tier-name { font-size: 0.85rem; letter-spacing: 0.1em; color: var(--gold); }
+  .tier-price { font-family: "Yu Mincho", "YuMincho", serif; font-size: 1.7rem; color: var(--ink); }
+  .tier-price .unit { font-size: 0.9rem; color: var(--ink-soft); margin-left: 0.3rem; }
+  .tier-benefits { list-style: none; margin: 0; padding: 0; font-size: 0.92rem; color: var(--ink-soft); display: flex; flex-direction: column; gap: 0.45rem; }
+  .tier-benefits li { padding-left: 1.1rem; position: relative; }
+  .tier-benefits li::before { content: "―"; position: absolute; left: 0; color: var(--gold); }
+
+  .flow-steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2.5rem;
+    counter-reset: step;
+  }
+  .flow-step { position: relative; padding-left: 2.6rem; }
+  .flow-step::before {
+    counter-increment: step;
+    content: counter(step);
+    position: absolute;
+    left: 0; top: 0;
+    width: 1.8rem; height: 1.8rem;
+    border-radius: 50%;
+    background: var(--indigo);
+    color: var(--gold-bright);
+    font-family: "Yu Mincho", "YuMincho", serif;
+    font-size: 0.95rem;
+    display: flex; align-items: center; justify-content: center;
+  }
+  :root[data-theme="dark"] .flow-step::before { background: var(--gold-bright); color: var(--indigo-deep); }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) .flow-step::before { background: var(--gold-bright); color: var(--indigo-deep); }
+  }
+  .flow-step h3 { font-size: 1.02rem; margin-bottom: 0.35rem; }
+  .flow-step p { margin: 0; color: var(--ink-soft); font-size: 0.92rem; }
+
+  .sponsor-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.1rem;
+    margin-top: 2rem;
+  }
+  @media (max-width: 860px) { .sponsor-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 480px) { .sponsor-grid { grid-template-columns: 1fr; } }
+  .sponsor-banner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 140px;
+    padding: 0.33rem 1.2rem;
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    overflow: hidden;
+    text-decoration: none;
+    box-shadow: var(--shadow);
+    transition: transform 0.15s, box-shadow 0.15s, border-color 0.15s;
+  }
+  .sponsor-banner:hover, .sponsor-banner:focus-visible {
+    transform: translateY(-2px);
+    box-shadow: 0 14px 26px rgba(184, 137, 43, 0.2);
+    border-color: var(--gold-bright);
+    outline: none;
+  }
+  .sponsor-banner img {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    display: block;
+  }
+  .sponsor-banner--text {
+    flex-direction: column;
+    gap: 0.35rem;
+    padding: 1.2rem 1.4rem;
+    text-align: center;
+  }
+  .sponsor-name {
+    font-family: "Yu Mincho", "YuMincho", "Hiragino Mincho ProN", serif;
+    font-size: 1.05rem;
+    color: var(--ink);
+  }
+  .sponsor-desc { font-size: 0.85rem; color: var(--ink-soft); }
+
+  .notice-box {
+    margin-top: 2.5rem;
+    border: 1px dashed var(--line);
+    border-radius: 8px;
+    padding: 1.3rem 1.5rem;
+    background: var(--card);
+  }
+  .notice-box dl { display: grid; grid-template-columns: max-content 1fr; gap: 0.6rem 1.5rem; margin: 0; }
+  .notice-box dt { color: var(--ink-soft); font-size: 0.88rem; white-space: nowrap; }
+  .notice-box dd { margin: 0; }
+
+  /* ---------- Program ---------- */
+  .program-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    margin-top: 2.5rem;
+  }
+  .program-block {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+  }
+  .program-block-head {
+    padding: 1.1rem 1.4rem;
+    background: var(--indigo);
+    color: #F1E9D6;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .program-block-head h3 { color: #F1E9D6; font-size: 1.1rem; }
+  .program-block-head span { font-size: 0.8rem; color: var(--gold-bright); letter-spacing: 0.08em; }
+  table.schedule { width: 100%; border-collapse: collapse; }
+  table.schedule td { padding: 0.85rem 1.4rem; border-bottom: 1px solid var(--line); font-size: 0.94rem; vertical-align: top; }
+  table.schedule tr:last-child td { border-bottom: none; }
+  table.schedule td.time { width: 6.5rem; color: var(--gold); white-space: nowrap; }
+  .table-scroll { overflow-x: auto; }
+
+  .disclaimer { margin-top: 1.5rem; font-size: 0.85rem; color: var(--ink-soft); }
+
+  /* ---------- Contact ---------- */
+  #contact { background: var(--bg-alt); }
+
+  .contact-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.4rem 1.6rem;
+    margin-top: 2.5rem;
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    padding: 2rem 2.2rem;
+    box-shadow: var(--shadow);
+  }
+  @media (max-width: 640px) { .contact-form { grid-template-columns: 1fr; } }
+  .form-row { display: flex; flex-direction: column; gap: 0.4rem; }
+  .form-row--wide { grid-column: 1 / -1; }
+  .form-row label { font-size: 0.85rem; color: var(--ink-soft); }
+  .form-row .required {
+    font-size: 0.7rem;
+    color: var(--vermillion);
+    border: 1px solid var(--vermillion);
+    border-radius: 999px;
+    padding: 0.05rem 0.45rem;
+    margin-left: 0.5rem;
+  }
+  .form-row input, .form-row select, .form-row textarea {
+    font: inherit;
+    color: var(--ink);
+    background: var(--bg);
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    padding: 0.6rem 0.75rem;
+  }
+  .form-row textarea { resize: vertical; }
+  .form-row input:focus-visible, .form-row select:focus-visible, .form-row textarea:focus-visible {
+    outline: 2px solid var(--gold-bright);
+    outline-offset: 1px;
+  }
+  .form-submit-row { align-items: flex-start; gap: 0.9rem; }
+  .form-submit-row .btn:disabled {
+    cursor: not-allowed;
+    opacity: 0.55;
+  }
+  .form-submit-row .btn:disabled:hover { transform: none; box-shadow: none; }
+  .form-note { margin: 0; font-size: 0.85rem; color: var(--ink-soft); }
+
+  .gform-cta {
+    margin-top: 2.5rem;
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    padding: 2.5rem 2rem;
+    box-shadow: var(--shadow);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.4rem;
+  }
+  .gform-cta-text { margin: 0; color: var(--ink-soft); max-width: 46ch; }
+  .gform-cta .btn[aria-disabled="true"] {
+    cursor: not-allowed;
+    opacity: 0.55;
+    pointer-events: none;
+  }
+
+  .contact-card {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    padding: 2rem 2.2rem;
+    margin-top: 2.5rem;
+    box-shadow: var(--shadow);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+  @media (max-width: 640px) { .contact-card { grid-template-columns: 1fr; } }
+  .contact-card dl { margin: 0; display: flex; flex-direction: column; gap: 1.1rem; }
+  .contact-card dt { font-size: 0.8rem; letter-spacing: 0.1em; color: var(--gold); }
+  .contact-card dd { margin: 0.25rem 0 0; font-size: 1.0rem; }
+  .contact-card dd.tbd { color: var(--ink-soft); font-size: 0.92rem; }
+
+  .footer-illustration {
+    height: 150px;
+    background: linear-gradient(180deg, var(--indigo) 0%, var(--indigo-deep) 100%);
+    overflow: hidden;
+  }
+  .footer-illustration svg { width: 100%; height: 100%; display: block; }
+
+  footer {
+    padding: 1.5rem 1.5rem 3rem;
+    text-align: center;
+    color: var(--ink-soft);
+    font-size: 0.82rem;
+    background: var(--indigo-deep);
+  }
+  footer .footer-brand { color: var(--gold-bright); margin-bottom: 0.4rem; font-family: "Yu Mincho", "YuMincho", serif; }
+
+  a.skip-link {
+    position: absolute; left: -999px; top: 0;
+  }
+  a.skip-link:focus {
+    left: 1rem; top: 1rem; background: var(--gold-bright); color: #1F1400; padding: 0.5rem 1rem; z-index: 100;
+  }
+
+  .navlinks .current {
+    color: var(--gold-bright);
+    font-size: 0.92rem;
+    letter-spacing: 0.03em;
+    padding: 0.3rem 0.1rem;
+    border-bottom: 2px solid var(--gold-bright);
+  }
+</style>
+<a class="skip-link" href="#top">本文へスキップ</a>
+
+<nav class="navbar">
+  <div class="navbar-inner">
+    <div class="brand">市川市立百合台小学校 <strong>創立50周年記念行事</strong></div>
+    <ul class="navlinks">
+      <li><a href="index.html#top">TOP</a></li>
+      <li><a href="index.html#program">プログラム</a></li>
+      <li><a href="index.html#festival-map">出店マップ</a></li>
+      <li><a href="index.html#festival-info">お知らせ</a></li>
+      <li><a href="index.html#supporters">ご協賛者様一覧</a></li>
+      <li><span class="current">協賛について</span></li>
+      <li><a href="index.html#contact">お問い合わせ</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header id="top" class="hero">
+  <div class="hero-bg" aria-hidden="true">
+    <svg viewBox="0 0 1200 420" preserveAspectRatio="xMidYMax slice" xmlns="http://www.w3.org/2000/svg">
+      <!-- moon, kept small and high, well clear of the title -->
+      <circle cx="1040" cy="52" r="55" fill="#F1E9D6" opacity="0.07" />
+      <circle cx="1040" cy="52" r="30" fill="#F1E9D6" opacity="0.9" />
+
+      <!-- stars -->
+      <circle cx="130" cy="22" r="2" fill="#F1E9D6" opacity="0.6" />
+      <circle cx="620" cy="16" r="1.6" fill="#F1E9D6" opacity="0.5" />
+      <circle cx="760" cy="10" r="1.4" fill="#F1E9D6" opacity="0.4" />
+      <circle cx="900" cy="24" r="1.8" fill="#F1E9D6" opacity="0.5" />
+      <circle cx="360" cy="14" r="1.4" fill="#F1E9D6" opacity="0.45" />
+
+      <!-- lantern rope, hugging the very top edge -->
+      <path d="M40,18 Q600,40 1160,18" fill="none" stroke="#4A5B70" stroke-width="2" opacity="0.5" />
+
+      <!-- lanterns: compact, strung along the top edge only -->
+      <g>
+        <line x1="120" y1="20" x2="120" y2="34" stroke="#4A5B70" stroke-width="2" opacity="0.6" />
+        <circle cx="120" cy="50" r="24" fill="#E8C36B" opacity="0.12" />
+        <ellipse cx="120" cy="50" rx="14" ry="16" fill="#E8C36B" />
+        <rect x="113" y="33" width="14" height="6" rx="2" fill="#4A5B70" />
+      </g>
+      <g>
+        <line x1="280" y1="28" x2="280" y2="42" stroke="#4A5B70" stroke-width="2" opacity="0.6" />
+        <circle cx="280" cy="58" r="24" fill="#E2694A" opacity="0.12" />
+        <ellipse cx="280" cy="58" rx="14" ry="16" fill="#E2694A" />
+        <rect x="273" y="41" width="14" height="6" rx="2" fill="#4A5B70" />
+      </g>
+      <g>
+        <line x1="440" y1="34" x2="440" y2="48" stroke="#4A5B70" stroke-width="2" opacity="0.6" />
+        <circle cx="440" cy="64" r="24" fill="#E8C36B" opacity="0.12" />
+        <ellipse cx="440" cy="64" rx="14" ry="16" fill="#E8C36B" />
+        <rect x="433" y="47" width="14" height="6" rx="2" fill="#4A5B70" />
+      </g>
+      <g>
+        <line x1="600" y1="37" x2="600" y2="51" stroke="#4A5B70" stroke-width="2" opacity="0.6" />
+        <circle cx="600" cy="67" r="24" fill="#E2694A" opacity="0.12" />
+        <ellipse cx="600" cy="67" rx="14" ry="16" fill="#E2694A" />
+        <rect x="593" y="50" width="14" height="6" rx="2" fill="#4A5B70" />
+      </g>
+      <g>
+        <line x1="760" y1="34" x2="760" y2="48" stroke="#4A5B70" stroke-width="2" opacity="0.6" />
+        <circle cx="760" cy="64" r="24" fill="#E8C36B" opacity="0.12" />
+        <ellipse cx="760" cy="64" rx="14" ry="16" fill="#E8C36B" />
+        <rect x="753" y="47" width="14" height="6" rx="2" fill="#4A5B70" />
+      </g>
+      <g>
+        <line x1="920" y1="28" x2="920" y2="42" stroke="#4A5B70" stroke-width="2" opacity="0.6" />
+        <circle cx="920" cy="58" r="24" fill="#E2694A" opacity="0.12" />
+        <ellipse cx="920" cy="58" rx="14" ry="16" fill="#E2694A" />
+        <rect x="913" y="41" width="14" height="6" rx="2" fill="#4A5B70" />
+      </g>
+      <g>
+        <line x1="1080" y1="20" x2="1080" y2="34" stroke="#4A5B70" stroke-width="2" opacity="0.6" />
+        <circle cx="1080" cy="50" r="24" fill="#E8C36B" opacity="0.12" />
+        <ellipse cx="1080" cy="50" rx="14" ry="16" fill="#E8C36B" />
+        <rect x="1073" y="33" width="14" height="6" rx="2" fill="#4A5B70" />
+      </g>
+
+      <!-- fireworks: between lantern 4 & 5 (small), and between lantern 5 & 6 (big) -->
+      <circle cx="840" cy="150" r="34" fill="var(--gold-bright)" opacity="0.14" />
+      <g stroke-width="2.5" stroke-linecap="round">
+        <line x1="840" y1="150" x2="840" y2="75" stroke="#E0678F" />
+        <line x1="840" y1="150" x2="865" y2="106.7" stroke="var(--vermillion)" />
+        <line x1="840" y1="150" x2="905" y2="112.5" stroke="var(--gold-bright)" />
+        <line x1="840" y1="150" x2="890" y2="150" stroke="#E0678F" />
+        <line x1="840" y1="150" x2="905" y2="187.5" stroke="var(--vermillion)" />
+        <line x1="840" y1="150" x2="865" y2="193.3" stroke="var(--gold-bright)" />
+        <line x1="840" y1="150" x2="840" y2="225" stroke="#E0678F" />
+        <line x1="840" y1="150" x2="815" y2="193.3" stroke="var(--vermillion)" />
+        <line x1="840" y1="150" x2="775" y2="187.5" stroke="var(--gold-bright)" />
+        <line x1="840" y1="150" x2="790" y2="150" stroke="#E0678F" />
+        <line x1="840" y1="150" x2="775" y2="112.5" stroke="var(--vermillion)" />
+        <line x1="840" y1="150" x2="815" y2="106.7" stroke="var(--gold-bright)" />
+      </g>
+      <circle cx="840" cy="75" r="2.6" fill="#E0678F" />
+      <circle cx="865" cy="106.7" r="2.6" fill="var(--vermillion)" />
+      <circle cx="905" cy="112.5" r="2.6" fill="var(--gold-bright)" />
+      <circle cx="890" cy="150" r="2.6" fill="#E0678F" />
+      <circle cx="905" cy="187.5" r="2.6" fill="var(--vermillion)" />
+      <circle cx="865" cy="193.3" r="2.6" fill="var(--gold-bright)" />
+      <circle cx="840" cy="225" r="2.6" fill="#E0678F" />
+      <circle cx="815" cy="193.3" r="2.6" fill="var(--vermillion)" />
+      <circle cx="775" cy="187.5" r="2.6" fill="var(--gold-bright)" />
+      <circle cx="790" cy="150" r="2.6" fill="#E0678F" />
+      <circle cx="775" cy="112.5" r="2.6" fill="var(--vermillion)" />
+      <circle cx="815" cy="106.7" r="2.6" fill="var(--gold-bright)" />
+      <circle cx="840" cy="150" r="4.5" fill="var(--gold-bright)" />
+
+      <circle cx="680" cy="100" r="20" fill="var(--vermillion)" opacity="0.14" />
+      <g stroke-width="2" stroke-linecap="round">
+        <line x1="680" y1="100" x2="680" y2="55" stroke="var(--vermillion)" />
+        <line x1="680" y1="100" x2="701.2" y2="78.8" stroke="var(--gold-bright)" />
+        <line x1="680" y1="100" x2="725" y2="100" stroke="#E0678F" />
+        <line x1="680" y1="100" x2="701.2" y2="121.2" stroke="var(--vermillion)" />
+        <line x1="680" y1="100" x2="680" y2="145" stroke="var(--gold-bright)" />
+        <line x1="680" y1="100" x2="658.8" y2="121.2" stroke="#E0678F" />
+        <line x1="680" y1="100" x2="635" y2="100" stroke="var(--vermillion)" />
+        <line x1="680" y1="100" x2="658.8" y2="78.8" stroke="var(--gold-bright)" />
+      </g>
+      <circle cx="680" cy="55" r="2" fill="var(--vermillion)" />
+      <circle cx="701.2" cy="78.8" r="2" fill="var(--gold-bright)" />
+      <circle cx="725" cy="100" r="2" fill="#E0678F" />
+      <circle cx="701.2" cy="121.2" r="2" fill="var(--vermillion)" />
+      <circle cx="680" cy="145" r="2" fill="var(--gold-bright)" />
+      <circle cx="658.8" cy="121.2" r="2" fill="#E0678F" />
+      <circle cx="635" cy="100" r="2" fill="var(--vermillion)" />
+      <circle cx="658.8" cy="78.8" r="2" fill="var(--gold-bright)" />
+      <circle cx="680" cy="100" r="3.2" fill="var(--vermillion)" />
+
+      <!-- ground -->
+      <rect x="0" y="384" width="1200" height="36" fill="#0B1420" />
+
+      <!-- festival stalls -->
+      <g fill="#0B1420">
+        <rect x="60" y="340" width="120" height="44" />
+        <polygon points="48,340 192,340 120,300" />
+        <rect x="230" y="352" width="90" height="32" />
+        <polygon points="220,352 330,352 275,322" />
+        <rect x="900" y="348" width="100" height="36" />
+        <polygon points="888,348 1012,348 950,316" />
+        <rect x="1040" y="336" width="120" height="48" />
+        <polygon points="1028,336 1172,336 1100,298" />
+      </g>
+
+      <!-- school silhouette, center: long 4-story block + central stair tower, after reference photo -->
+      <g fill="#0B1420">
+        <rect x="382" y="336" width="52" height="48" />
+        <rect x="430" y="310" width="372" height="74" />
+        <rect x="558" y="272" width="52" height="38" />
+        <rect x="566" y="260" width="36" height="12" />
+      </g>
+      <line x1="584" y1="260" x2="584" y2="240" stroke="#0B1420" stroke-width="3" />
+      <line x1="430" y1="310" x2="802" y2="310" stroke="#1B2A3D" stroke-width="2" opacity="0.6" />
+
+      <!-- lit windows -->
+      <g fill="#E8C36B" opacity="0.5">
+        <rect x="396" y="352" width="9" height="10" />
+        <rect x="414" y="352" width="9" height="10" />
+        <rect x="446" y="324" width="10" height="10" />
+        <rect x="476" y="324" width="10" height="10" />
+        <rect x="506" y="324" width="10" height="10" />
+        <rect x="536" y="324" width="10" height="10" />
+        <rect x="626" y="324" width="10" height="10" />
+        <rect x="656" y="324" width="10" height="10" />
+        <rect x="686" y="324" width="10" height="10" />
+        <rect x="716" y="324" width="10" height="10" />
+        <rect x="746" y="324" width="10" height="10" />
+        <rect x="776" y="324" width="10" height="10" />
+        <rect x="446" y="352" width="10" height="10" />
+        <rect x="476" y="352" width="10" height="10" />
+        <rect x="506" y="352" width="10" height="10" />
+        <rect x="536" y="352" width="10" height="10" />
+        <rect x="626" y="352" width="10" height="10" />
+        <rect x="656" y="352" width="10" height="10" />
+        <rect x="686" y="352" width="10" height="10" />
+        <rect x="716" y="352" width="10" height="10" />
+        <rect x="746" y="352" width="10" height="10" />
+        <rect x="776" y="352" width="10" height="10" />
+        <rect x="576" y="282" width="8" height="9" />
+      </g>
+
+      <!-- floodlight poles flanking the schoolyard -->
+      <line x1="395" y1="384" x2="395" y2="330" stroke="#0B1420" stroke-width="3" />
+      <circle cx="395" cy="326" r="8" fill="#E8C36B" opacity="0.15" />
+      <circle cx="395" cy="326" r="3.5" fill="#E8C36B" opacity="0.7" />
+      <line x1="838" y1="384" x2="838" y2="330" stroke="#0B1420" stroke-width="3" />
+      <circle cx="838" cy="326" r="8" fill="#E8C36B" opacity="0.15" />
+      <circle cx="838" cy="326" r="3.5" fill="#E8C36B" opacity="0.7" />
+    </svg>
+  </div>
+  <div class="hero-overlay" aria-hidden="true"></div>
+  <div class="hero-inner" style="padding-bottom: 4rem;">
+    <div>
+      <span class="eyebrow">市川市立百合台小学校</span>
+      <h1>協賛について</h1>
+      <p class="lead wrap-phrase"><span>創立50周年記念行事の</span><span>開催にあたり、</span><span>皆さまからの</span><span>ご協賛を</span><span>お願いしております。</span></p>
+      <div class="hero-actions">
+        <a class="btn btn-ghost" href="index.html#top">← TOPページへ戻る</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="kohaku-band"></div>
+
+<section id="sponsorship">
+  <div class="section-inner">
+    <h2 class="section-title">
+      <svg class="title-icon" viewBox="0 0 32 32" aria-hidden="true">
+        <circle cx="16" cy="16" r="15" fill="var(--gold-bright)" opacity="0.12" />
+        <line x1="16" y1="16" x2="16" y2="3" stroke="#E0678F" stroke-width="2" stroke-linecap="round" />
+        <line x1="16" y1="16" x2="20.5" y2="8.2" stroke="var(--vermillion)" stroke-width="2" stroke-linecap="round" />
+        <line x1="16" y1="16" x2="27.3" y2="9.5" stroke="var(--gold-bright)" stroke-width="2" stroke-linecap="round" />
+        <line x1="16" y1="16" x2="25" y2="16" stroke="#E0678F" stroke-width="2" stroke-linecap="round" />
+        <line x1="16" y1="16" x2="27.3" y2="22.5" stroke="var(--vermillion)" stroke-width="2" stroke-linecap="round" />
+        <line x1="16" y1="16" x2="20.5" y2="23.8" stroke="var(--gold-bright)" stroke-width="2" stroke-linecap="round" />
+        <line x1="16" y1="16" x2="16" y2="29" stroke="#E0678F" stroke-width="2" stroke-linecap="round" />
+        <line x1="16" y1="16" x2="11.5" y2="23.8" stroke="var(--vermillion)" stroke-width="2" stroke-linecap="round" />
+        <line x1="16" y1="16" x2="4.7" y2="22.5" stroke="var(--gold-bright)" stroke-width="2" stroke-linecap="round" />
+        <line x1="16" y1="16" x2="7" y2="16" stroke="#E0678F" stroke-width="2" stroke-linecap="round" />
+        <line x1="16" y1="16" x2="4.7" y2="9.5" stroke="var(--vermillion)" stroke-width="2" stroke-linecap="round" />
+        <line x1="16" y1="16" x2="11.5" y2="8.2" stroke="var(--gold-bright)" stroke-width="2" stroke-linecap="round" />
+        <circle cx="16" cy="3" r="1.6" fill="#E0678F" />
+        <circle cx="20.5" cy="8.2" r="1.6" fill="var(--vermillion)" />
+        <circle cx="27.3" cy="9.5" r="1.6" fill="var(--gold-bright)" />
+        <circle cx="25" cy="16" r="1.6" fill="#E0678F" />
+        <circle cx="27.3" cy="22.5" r="1.6" fill="var(--vermillion)" />
+        <circle cx="20.5" cy="23.8" r="1.6" fill="var(--gold-bright)" />
+        <circle cx="16" cy="29" r="1.6" fill="#E0678F" />
+        <circle cx="11.5" cy="23.8" r="1.6" fill="var(--vermillion)" />
+        <circle cx="4.7" cy="22.5" r="1.6" fill="var(--gold-bright)" />
+        <circle cx="7" cy="16" r="1.6" fill="#E0678F" />
+        <circle cx="4.7" cy="9.5" r="1.6" fill="var(--vermillion)" />
+        <circle cx="11.5" cy="8.2" r="1.6" fill="var(--gold-bright)" />
+        <circle cx="16" cy="16" r="3" fill="var(--gold-bright)" />
+      </svg>
+      協賛について
+    </h2>
+    <p class="section-lead wrap-phrase"><span>百合台小学校は、</span><span>地域の皆さまに</span><span>支えられ、</span><span>このたび</span><span>創立50周年を</span><span>迎えます。</span><br><span>これを記念し、</span><span>児童・卒業生・</span><span>保護者・地域の</span><span>方々が一堂に会する式典とお祭りを開催いたします。</span><br><span>開催にあたり、</span><span>下記のとおり</span><span>協賛金を</span><span>募集しております。</span><br><span>何とぞご理解、</span><span>ご協力を</span><span>賜りますよう</span><span>お願い申し上げます。</span></p>
+
+    <div class="tier-grid">
+      <div class="tier-card">
+        <div class="tier-name">個人協賛</div>
+        <div class="tier-price tabular">5,000<span class="unit">円 / 1口</span></div>
+        <ul class="tier-benefits wrap-phrase">
+          <li><span>ホームページへ</span><span>お名前を掲載</span></li>
+          <li><span>口数に制限は</span><span>ございません</span></li>
+        </ul>
+      </div>
+      <div class="tier-card">
+        <div class="tier-name">一般協賛</div>
+        <div class="tier-price tabular">10,000<span class="unit">円 / 1口</span></div>
+        <ul class="tier-benefits wrap-phrase">
+          <li><span>ホームページへ</span><span>お名前・団体名を</span><span>掲載</span></li>
+          <li><span>ホームページや</span><span>SNSへの</span><span>リンクを</span><span>付けられます</span></li>
+          <li><span>口数に制限は</span><span>ございません</span></li>
+        </ul>
+      </div>
+      <div class="tier-card featured">
+        <div class="tier-name">特別協賛</div>
+        <div class="tier-price tabular">50,000<span class="unit">円 以上</span></div>
+        <ul class="tier-benefits wrap-phrase">
+          <li><span>ホームページに</span><span>団体名を</span><span>大きく掲載</span></li>
+          <li><span>ホームページや</span><span>SNSへの</span><span>リンクを</span><span>付けられます</span></li>
+          <li><span>式典への</span><span>招待席をご用意</span></li>
+          <li><span>会場内への</span><span>広告掲示など</span><span>個別のご相談も</span><span>承ります</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="flow-steps">
+      <div class="flow-step">
+        <h3>お申し込み</h3>
+        <p class="wrap-phrase"><span>お申し込みは</span><span>下記の</span><a href="https://docs.google.com/forms/d/e/1FAIpQLSfiK0y9RpSjYo2LSxc21f4wDYZZ8RbSkNB2P2O3m3174SnsJw/viewform" target="_blank" rel="noopener noreferrer" style="color:var(--vermillion);">Googleフォーム</a><span>より</span><span>承ります。</span></p>
+      </div>
+      <div class="flow-step">
+        <h3>ご入金</h3>
+        <p class="wrap-phrase"><span>お申し込み後、</span><span>担当者より</span><span>ご連絡する</span><span>口座へ</span><span>お振り込みください。</span></p>
+      </div>
+      <div class="flow-step">
+        <h3>掲載・特典のご案内</h3>
+        <p class="wrap-phrase"><span>ホームページへの</span><span>掲載や</span><span>特典について、</span><span>事務局より</span><span>ご案内いたします。</span></p>
+      </div>
+    </div>
+
+    <div class="notice-box">
+      <dl class="wrap-phrase">
+        <dt>申込締切</dt>
+        <dd class="tabular">2026年10月15日（木）</dd>
+        <dt>ご入金について</dt>
+        <dd><span>お申し込み後、</span><span>担当者より</span><span>振込先を</span><span>ご連絡いたします。</span></dd>
+        <dt>お申し込み・お問い合わせ</dt>
+        <dd><a href="index.html#contact" style="color:var(--vermillion);">お問い合わせページへ</a></dd>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<div class="kohaku-band"></div>
+
+<div class="footer-illustration" aria-hidden="true">
+  <svg viewBox="0 0 1200 170" preserveAspectRatio="xMidYMax slice" xmlns="http://www.w3.org/2000/svg">
+    <!-- lantern rope -->
+    <path d="M30,14 Q600,34 1170,14" fill="none" stroke="#4A5B70" stroke-width="2" opacity="0.5" />
+    <g>
+      <line x1="100" y1="16" x2="100" y2="28" stroke="#4A5B70" stroke-width="2" opacity="0.6" />
+      <ellipse cx="100" cy="42" rx="12" ry="14" fill="#E8C36B" />
+      <rect x="94" y="27" width="12" height="5" rx="2" fill="#4A5B70" />
+    </g>
+    <g>
+      <line x1="300" y1="22" x2="300" y2="34" stroke="#4A5B70" stroke-width="2" opacity="0.6" />
+      <ellipse cx="300" cy="48" rx="12" ry="14" fill="#E2694A" />
+      <rect x="294" y="33" width="12" height="5" rx="2" fill="#4A5B70" />
+    </g>
+    <g>
+      <line x1="500" y1="26" x2="500" y2="38" stroke="#4A5B70" stroke-width="2" opacity="0.6" />
+      <ellipse cx="500" cy="52" rx="12" ry="14" fill="#E8C36B" />
+      <rect x="494" y="37" width="12" height="5" rx="2" fill="#4A5B70" />
+    </g>
+    <g>
+      <line x1="700" y1="26" x2="700" y2="38" stroke="#4A5B70" stroke-width="2" opacity="0.6" />
+      <ellipse cx="700" cy="52" rx="12" ry="14" fill="#E2694A" />
+      <rect x="694" y="37" width="12" height="5" rx="2" fill="#4A5B70" />
+    </g>
+    <g>
+      <line x1="900" y1="22" x2="900" y2="34" stroke="#4A5B70" stroke-width="2" opacity="0.6" />
+      <ellipse cx="900" cy="48" rx="12" ry="14" fill="#E8C36B" />
+      <rect x="894" y="33" width="12" height="5" rx="2" fill="#4A5B70" />
+    </g>
+    <g>
+      <line x1="1100" y1="16" x2="1100" y2="28" stroke="#4A5B70" stroke-width="2" opacity="0.6" />
+      <ellipse cx="1100" cy="42" rx="12" ry="14" fill="#E2694A" />
+      <rect x="1094" y="27" width="12" height="5" rx="2" fill="#4A5B70" />
+    </g>
+
+    <!-- ground -->
+    <rect x="0" y="150" width="1200" height="20" fill="#0B1420" />
+
+    <!-- festival stalls -->
+    <g fill="#0B1420">
+      <rect x="20" y="100" width="160" height="50" />
+      <polygon points="8,100 192,100 100,58" />
+      <rect x="220" y="90" width="150" height="60" />
+      <polygon points="208,90 382,90 295,48" />
+      <rect x="420" y="105" width="160" height="45" />
+      <polygon points="408,105 592,105 500,63" />
+      <rect x="620" y="95" width="150" height="55" />
+      <polygon points="608,95 782,95 695,53" />
+      <rect x="820" y="100" width="160" height="50" />
+      <polygon points="808,100 992,100 900,58" />
+      <rect x="1020" y="90" width="160" height="60" />
+      <polygon points="1008,90 1192,90 1100,48" />
+    </g>
+
+    <!-- lit stall windows, warm glow -->
+    <g fill="#E8C36B" opacity="0.45">
+      <rect x="60" y="118" width="18" height="16" />
+      <rect x="260" y="112" width="18" height="16" />
+      <rect x="460" y="122" width="18" height="16" />
+      <rect x="660" y="115" width="18" height="16" />
+      <rect x="860" y="118" width="18" height="16" />
+      <rect x="1060" y="112" width="18" height="16" />
+    </g>
+
+    <!-- lively crowd silhouettes -->
+    <g fill="#0B1420">
+      <circle cx="150" cy="128" r="6" /><rect x="144" y="134" width="12" height="16" rx="3" />
+      <circle cx="350" cy="126" r="6" /><rect x="344" y="132" width="12" height="18" rx="3" />
+      <circle cx="550" cy="130" r="5.5" /><rect x="544.5" y="135.5" width="11" height="15" rx="3" />
+      <circle cx="750" cy="127" r="6" /><rect x="744" y="133" width="12" height="17" rx="3" />
+      <circle cx="950" cy="129" r="6" /><rect x="944" y="135" width="12" height="15" rx="3" />
+      <circle cx="1050" cy="126" r="5.5" /><rect x="1044.5" y="131.5" width="11" height="18" rx="3" />
+    </g>
+  </svg>
+</div>
+
+
+<footer>
+  <div class="footer-brand">百合台小学校 創立50周年記念行事実行委員会</div>
+  <div>&copy; 市川市立百合台小学校創立50周年記念行事実行委員会</div>
+</footer>
