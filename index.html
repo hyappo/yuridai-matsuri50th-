@@ -506,6 +506,29 @@
     background: rgba(201, 154, 30, 0.06);
   }
   .donor-banner--featured .sponsor-name { font-size: 1.1rem; font-weight: 700; }
+  .shodo-banner { position: relative; overflow: hidden; }
+  .shodo-text {
+    font-family: "Yu Mincho", "YuMincho", "Hiragino Mincho ProN", "HG Mincho E", serif;
+    font-weight: 900;
+    font-size: 1.6rem;
+    letter-spacing: 0.35em;
+    color: var(--ink);
+    text-shadow: 0.5px 0.5px 0 rgba(0,0,0,0.15);
+  }
+  .shodo-seal {
+    position: absolute;
+    right: 12px;
+    bottom: 10px;
+    width: 16px;
+    height: 16px;
+    background: var(--vermillion);
+    border-radius: 2px;
+    opacity: 0.85;
+  }
+  @media (max-width: 600px) {
+    .shodo-text { font-size: 1rem; letter-spacing: 0.2em; }
+    .shodo-seal { width: 11px; height: 11px; right: 6px; bottom: 5px; }
+  }
   .donor-names { display: flex; flex-wrap: wrap; gap: 0.6rem; margin: 0; padding: 0; list-style: none; }
   .donor-names li {
     background: var(--card);
@@ -1049,6 +1072,7 @@
         <div class="sponsor-banner sponsor-banner--text donor-banner--featured"><span class="sponsor-name">株式会社サンライズ物産</span></div>
         <div class="sponsor-banner sponsor-banner--text donor-banner--featured"><span class="sponsor-name">千葉中央信用金庫</span></div>
         <div class="sponsor-banner sponsor-banner--text donor-banner--featured"><span class="sponsor-name">株式会社グリーンフィールド</span></div>
+        <div class="sponsor-banner shodo-banner"><span class="shodo-text">松丸陽輔</span><span class="shodo-seal"></span></div>
       </div>
     </div>
 
