@@ -614,16 +614,17 @@
   }
   .vendor-item .vendor-num {
     flex-shrink: 0;
-    width: 2.3rem;
+    min-width: 2.3rem;
     height: 2.3rem;
-    border-radius: 50%;
+    padding: 0 0.35rem;
+    border-radius: 999px;
     background: var(--vermillion);
     color: #fff;
     display: flex;
     align-items: center;
     justify-content: center;
     font-weight: 700;
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
   .vendor-item .vendor-info { display: flex; flex-direction: column; gap: 0.2rem; min-width: 0; padding-top: 0.15rem; }
   .vendor-item .vendor-name { font-size: 0.92rem; color: var(--ink); }
@@ -1008,15 +1009,13 @@
           <!-- left column -->
           <g fill="var(--card)" stroke="var(--ink-soft)" stroke-width="1.5">
             <rect x="60" y="175" width="80" height="55" rx="4" />
-            <rect x="60" y="235" width="80" height="55" rx="4" />
-            <rect x="60" y="295" width="80" height="55" rx="4" />
+            <rect x="60" y="235" width="80" height="115" rx="4" />
             <rect x="60" y="355" width="80" height="55" rx="4" />
             <rect x="60" y="415" width="80" height="55" rx="4" />
           </g>
           <g fill="var(--ink)" font-size="26" font-weight="700" text-anchor="middle">
             <text x="100" y="208">8</text>
-            <text x="100" y="268">9</text>
-            <text x="100" y="328">10</text>
+            <text x="100" y="300" font-size="22">9・10</text>
             <text x="100" y="388">11</text>
             <text x="100" y="448">12</text>
           </g>
@@ -1045,8 +1044,7 @@
             <rect x="500" y="230" width="90" height="58" rx="4" />
             <rect x="230" y="290" width="90" height="58" rx="4" />
             <rect x="320" y="290" width="90" height="58" rx="4" />
-            <rect x="410" y="290" width="90" height="58" rx="4" />
-            <rect x="500" y="290" width="90" height="58" rx="4" />
+            <rect x="410" y="290" width="180" height="58" rx="4" />
           </g>
           <g fill="var(--ink)" font-size="26" font-weight="700" text-anchor="middle">
             <text x="275" y="265">13</text>
@@ -1055,8 +1053,7 @@
             <text x="545" y="265">16</text>
             <text x="275" y="325">17</text>
             <text x="365" y="325">18</text>
-            <text x="455" y="325">19</text>
-            <text x="545" y="325">20</text>
+            <text x="500" y="325">19・20</text>
           </g>
 
           <!-- stage -->
@@ -1080,19 +1077,17 @@
       <div class="vendor-item"><span class="vendor-num">5</span><div class="vendor-info"><span class="vendor-name">リリウム</span><span class="vendor-desc">バルーン、ハンドメイド作品、バザー品</span></div></div>
       <div class="vendor-item"><span class="vendor-num">6</span><div class="vendor-info"><span class="vendor-name">AMYハンドメイド</span><span class="vendor-desc">UFOキャッチャー、ガチャガチャ、ハンドメイドワークショップ</span></div></div>
       <div class="vendor-item"><span class="vendor-num">7</span><div class="vendor-info"><span class="vendor-name">八幡小BCC</span><span class="vendor-desc">型抜き、くじ引き、ガチャガチャ</span></div></div>
-      <div class="vendor-item"><span class="vendor-num">8</span><div class="vendor-info"><span class="vendor-name">平川レッドスターズ</span><span class="vendor-desc">飲料販売・アトラクション（内容未定）</span></div></div>
-      <div class="vendor-item"><span class="vendor-num">9</span><div class="vendor-info"><span class="vendor-name">百合台SC</span><span class="vendor-desc">くじ引き、ゲーム、飲料、食べ物</span></div></div>
-      <div class="vendor-item"><span class="vendor-num">10</span><div class="vendor-info"><span class="vendor-name">百合台SC</span><span class="vendor-desc">くじ引き、ゲーム、飲料、食べ物</span></div></div>
+      <div class="vendor-item"><span class="vendor-num">8</span><div class="vendor-info"><span class="vendor-name">（空き）</span></div></div>
+      <div class="vendor-item"><span class="vendor-num">9・10</span><div class="vendor-info"><span class="vendor-name">百合台SC</span><span class="vendor-desc">くじ引き、ゲーム、飲料、食べ物</span></div></div>
       <div class="vendor-item"><span class="vendor-num">11</span><div class="vendor-info"><span class="vendor-name">居酒屋もーもー</span><span class="vendor-desc">型抜き</span></div></div>
       <div class="vendor-item"><span class="vendor-num">12</span><div class="vendor-info"><span class="vendor-name">曽谷縄文まつり実行委員会</span><span class="vendor-desc">たこせん、飲み物</span></div></div>
       <div class="vendor-item"><span class="vendor-num">13</span><div class="vendor-info"><span class="vendor-name">曽谷連合子ども野球部</span><span class="vendor-desc">飲み物（お酒、ジュース類）</span></div></div>
-      <div class="vendor-item"><span class="vendor-num">14</span><div class="vendor-info"><span class="vendor-name">鳥ゆき（とりゆき）</span><span class="vendor-desc">焼き鳥</span></div></div>
+      <div class="vendor-item"><span class="vendor-num">14</span><div class="vendor-info"><span class="vendor-name">鳥ゆき</span><span class="vendor-desc">焼き鳥</span></div></div>
       <div class="vendor-item"><span class="vendor-num">15</span><div class="vendor-info"><span class="vendor-name">市川てらこや</span><span class="vendor-desc">輪投げ・ヨーヨー釣り</span></div></div>
       <div class="vendor-item"><span class="vendor-num">16</span><div class="vendor-info"><span class="vendor-name">ボローニャ市川</span><span class="vendor-desc">ボローニャデニッシュパン、ボローニャトースト</span></div></div>
-      <div class="vendor-item"><span class="vendor-num">17</span><div class="vendor-info"><span class="vendor-name">ゆりのこ学級（SHOP）</span><span class="vendor-desc">野菜、漬け物、ラスク、子ども用ゲーム</span></div></div>
-      <div class="vendor-item"><span class="vendor-num">18</span><div class="vendor-info"><span class="vendor-name">おやの会（わなげ）</span><span class="vendor-desc">わなげ</span></div></div>
-      <div class="vendor-item"><span class="vendor-num">19</span><div class="vendor-info"><span class="vendor-name">おやの会（パン）</span><span class="vendor-desc">パン</span></div></div>
-      <div class="vendor-item"><span class="vendor-num">20</span><div class="vendor-info"><span class="vendor-name">おやの会（ラムネ）</span><span class="vendor-desc">ラムネ</span></div></div>
+      <div class="vendor-item"><span class="vendor-num">17</span><div class="vendor-info"><span class="vendor-name">ゆりのこ学級</span><span class="vendor-desc">野菜、漬け物、ラスク、子ども用ゲーム</span></div></div>
+      <div class="vendor-item"><span class="vendor-num">18</span><div class="vendor-info"><span class="vendor-name">百合台おやじの会</span><span class="vendor-desc">わなげ</span></div></div>
+      <div class="vendor-item"><span class="vendor-num">19・20</span><div class="vendor-info"><span class="vendor-name">平川レッドスターズ</span><span class="vendor-desc">飲料販売・アトラクション（内容未定）</span></div></div>
       <div class="vendor-item"><span class="vendor-num">21</span><div class="vendor-info"><span class="vendor-name">TY MASTERS CAFÉ</span><span class="vendor-desc">カラフルチョコバナナ、光るボトルドリンク、飲料</span></div></div>
       <div class="vendor-item"><span class="vendor-num">22</span><div class="vendor-info"><span class="vendor-name">ヒーロースタンド（キッチンカー）</span><span class="vendor-desc">焼きそば、ポテト、チュロス、フランク、かき氷、ドリンク</span></div></div>
       <div class="vendor-item"><span class="vendor-num">23</span><div class="vendor-info"><span class="vendor-name">NPO法人企画</span><span class="vendor-desc">内容未定</span></div></div>
