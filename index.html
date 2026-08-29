@@ -596,6 +596,37 @@
 
   .disclaimer { margin-top: 1.5rem; font-size: 0.85rem; color: var(--ink-soft); }
 
+  .vendor-list {
+    margin-top: 2.5rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+    gap: 0.8rem;
+  }
+  .vendor-item {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    padding: 0.7rem 1rem;
+    box-shadow: var(--shadow);
+  }
+  .vendor-item .vendor-num {
+    flex-shrink: 0;
+    width: 2.3rem;
+    height: 2.3rem;
+    border-radius: 50%;
+    background: var(--vermillion);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1rem;
+  }
+  .vendor-item .vendor-name { font-size: 0.92rem; color: var(--ink); }
+
   /* ---------- Contact ---------- */
   #contact {
     background: linear-gradient(180deg, var(--indigo) 0%, var(--indigo-deep) 100%);
@@ -936,36 +967,153 @@
     <p class="section-lead wrap-phrase"><span>百合台祭り当日の</span><span>会場イメージです。</span></p>
 
     <div class="map-card">
-      <svg viewBox="0 0 800 460" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="会場配置イメージ図">
-        <rect x="30" y="30" width="740" height="80" fill="var(--ink-soft)" opacity="0.15" stroke="var(--line)" />
-        <text x="400" y="80" text-anchor="middle" font-family="'Hiragino Kaku Gothic ProN','Yu Gothic',sans-serif" font-size="34" fill="var(--ink-soft)">校舎</text>
+      <svg viewBox="0 0 800 620" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="出店マップ（番号案内）">
+        <rect x="40" y="20" width="720" height="45" fill="var(--ink-soft)" opacity="0.15" stroke="var(--line)" />
+        <text x="400" y="48" text-anchor="middle" font-family="'Hiragino Kaku Gothic ProN','Yu Gothic',sans-serif" font-size="22" fill="var(--ink-soft)">校舎（立入禁止）</text>
 
-        <rect x="30" y="130" width="740" height="300" fill="none" stroke="var(--line)" stroke-width="2" />
+        <rect x="370" y="65" width="60" height="18" fill="none" stroke="var(--line)" stroke-width="1.5" />
+        <text x="400" y="78" text-anchor="middle" font-family="'Hiragino Kaku Gothic ProN','Yu Gothic',sans-serif" font-size="12" fill="var(--ink-soft)">正門</text>
 
-        <rect x="70" y="170" width="220" height="90" rx="6" fill="var(--gold-bright)" opacity="0.18" stroke="var(--gold-bright)" stroke-width="2" />
-        <text x="180" y="212" text-anchor="middle" font-family="'Hiragino Kaku Gothic ProN','Yu Gothic',sans-serif" font-size="30" fill="var(--ink)">ステージ</text>
-        <text x="180" y="240" text-anchor="middle" font-family="'Hiragino Kaku Gothic ProN','Yu Gothic',sans-serif" font-size="20" fill="var(--ink-soft)">（ダンス・演奏）</text>
+        <rect x="40" y="80" width="720" height="410" fill="none" stroke="var(--line)" stroke-width="2" />
 
-        <rect x="70" y="290" width="150" height="80" rx="6" fill="var(--vermillion)" opacity="0.14" stroke="var(--vermillion)" stroke-width="2" />
-        <text x="145" y="338" text-anchor="middle" font-family="'Hiragino Kaku Gothic ProN','Yu Gothic',sans-serif" font-size="27" fill="var(--ink)">本部・受付</text>
+        <g font-family="'Hiragino Kaku Gothic ProN','Yu Gothic',sans-serif">
+          <!-- top-left cluster -->
+          <g fill="var(--card)" stroke="var(--ink-soft)" stroke-width="1.5">
+            <rect x="60" y="100" width="80" height="60" rx="4" />
+            <rect x="145" y="100" width="80" height="60" rx="4" />
+            <rect x="230" y="100" width="80" height="60" rx="4" />
+            <rect x="315" y="100" width="80" height="60" rx="4" />
+          </g>
+          <g fill="var(--ink)" font-size="26" font-weight="700" text-anchor="middle">
+            <text x="100" y="137">22</text>
+            <text x="185" y="137">1</text>
+            <text x="270" y="137">3</text>
+            <text x="355" y="137">4</text>
+          </g>
 
-        <rect x="330" y="170" width="400" height="200" rx="8" fill="none" stroke="var(--line)" stroke-width="2.5" stroke-dasharray="6 6" />
-        <text x="530" y="198" text-anchor="middle" font-family="'Hiragino Kaku Gothic ProN','Yu Gothic',sans-serif" font-size="26" fill="var(--gold)">模擬店エリア</text>
-        <g fill="var(--card)" stroke="var(--ink-soft)" stroke-width="1.5">
-          <rect x="350" y="210" width="80" height="55" rx="4" />
-          <rect x="450" y="210" width="80" height="55" rx="4" />
-          <rect x="550" y="210" width="80" height="55" rx="4" />
-          <rect x="650" y="210" width="60" height="55" rx="4" />
-          <rect x="350" y="290" width="80" height="55" rx="4" />
-          <rect x="450" y="290" width="80" height="55" rx="4" />
-          <rect x="550" y="290" width="80" height="55" rx="4" />
+          <!-- top-right cluster -->
+          <g fill="var(--card)" stroke="var(--ink-soft)" stroke-width="1.5">
+            <rect x="500" y="100" width="85" height="60" rx="4" />
+            <rect x="590" y="100" width="85" height="60" rx="4" />
+            <rect x="680" y="100" width="75" height="60" rx="4" />
+          </g>
+          <g fill="var(--ink)" font-size="26" font-weight="700" text-anchor="middle">
+            <text x="542" y="137">5</text>
+            <text x="632" y="137">6</text>
+            <text x="717" y="137">7</text>
+          </g>
+
+          <!-- left column -->
+          <g fill="var(--card)" stroke="var(--ink-soft)" stroke-width="1.5">
+            <rect x="60" y="175" width="80" height="55" rx="4" />
+            <rect x="60" y="235" width="80" height="55" rx="4" />
+            <rect x="60" y="295" width="80" height="55" rx="4" />
+            <rect x="60" y="355" width="80" height="55" rx="4" />
+            <rect x="60" y="415" width="80" height="55" rx="4" />
+          </g>
+          <g fill="var(--ink)" font-size="26" font-weight="700" text-anchor="middle">
+            <text x="100" y="208">8</text>
+            <text x="100" y="268">9</text>
+            <text x="100" y="328">10</text>
+            <text x="100" y="388">11</text>
+            <text x="100" y="448">12</text>
+          </g>
+
+          <!-- right column -->
+          <g fill="var(--card)" stroke="var(--ink-soft)" stroke-width="1.5">
+            <rect x="680" y="175" width="75" height="55" rx="4" />
+            <rect x="680" y="235" width="75" height="55" rx="4" />
+            <rect x="680" y="295" width="75" height="55" rx="4" />
+            <rect x="680" y="355" width="75" height="55" rx="4" />
+            <rect x="680" y="415" width="75" height="55" rx="4" />
+          </g>
+          <g fill="var(--ink)" font-size="26" font-weight="700" text-anchor="middle">
+            <text x="717" y="208">21</text>
+            <text x="717" y="268">2</text>
+            <text x="717" y="328">23</text>
+            <text x="717" y="388">24</text>
+            <text x="717" y="448">25</text>
+          </g>
+
+          <!-- center grid -->
+          <g fill="var(--card)" stroke="var(--ink-soft)" stroke-width="1.5">
+            <rect x="230" y="230" width="90" height="58" rx="4" />
+            <rect x="320" y="230" width="90" height="58" rx="4" />
+            <rect x="410" y="230" width="90" height="58" rx="4" />
+            <rect x="500" y="230" width="90" height="58" rx="4" />
+            <rect x="230" y="290" width="90" height="58" rx="4" />
+            <rect x="320" y="290" width="90" height="58" rx="4" />
+            <rect x="410" y="290" width="90" height="58" rx="4" />
+            <rect x="500" y="290" width="90" height="58" rx="4" />
+          </g>
+          <g fill="var(--ink)" font-size="26" font-weight="700" text-anchor="middle">
+            <text x="275" y="265">13</text>
+            <text x="365" y="265">14</text>
+            <text x="455" y="265">15</text>
+            <text x="545" y="265">16</text>
+            <text x="275" y="325">17</text>
+            <text x="365" y="325">18</text>
+            <text x="455" y="325">19</text>
+            <text x="545" y="325">20</text>
+          </g>
+
+          <!-- stage -->
+          <rect x="230" y="380" width="80" height="90" rx="4" fill="none" stroke="var(--ink-soft)" stroke-width="1.5" stroke-dasharray="4 4" />
+          <text x="270" y="430" text-anchor="middle" font-size="18" fill="var(--ink-soft)">DJ<tspan x="270" dy="1.2em">ブース</tspan></text>
+
+          <rect x="320" y="380" width="270" height="90" rx="6" fill="var(--gold-bright)" opacity="0.16" stroke="var(--gold-bright)" stroke-width="2" stroke-dasharray="6 6" />
+          <text x="455" y="431" text-anchor="middle" font-size="24" fill="var(--gold)">青空ステージ</text>
+
+          <polygon points="380,555 420,555 400,525" fill="var(--vermillion)" />
+          <text x="400" y="578" text-anchor="middle" font-size="22" fill="var(--ink)">入口</text>
         </g>
-
-        <polygon points="380,430 420,430 400,400" fill="var(--vermillion)" />
-        <text x="400" y="453" text-anchor="middle" font-family="'Hiragino Kaku Gothic ProN','Yu Gothic',sans-serif" font-size="26" fill="var(--ink)">入口</text>
       </svg>
-      <p class="disclaimer">※ 会場配置は現時点のイメージ図です。詳しい配置は当日の掲示にてご案内します。</p>
+      <p class="disclaimer">※ 会場配置図は「第6回百合フェス会場図」を基にしています。番号は下記の出店者一覧に対応しています。</p>
     </div>
+  </div>
+</section>
+
+<div class="bunting"></div>
+
+<section id="vendors">
+  <div class="section-inner">
+    <h2 class="section-title">
+      <svg class="title-icon" viewBox="0 0 32 32" aria-hidden="true">
+        <path d="M4,4 L16,4 L28,16 L16,28 L4,16 Z" fill="none" stroke="var(--vermillion)" stroke-width="2" stroke-linejoin="round" />
+        <circle cx="11" cy="11" r="2.5" fill="var(--gold-bright)" />
+      </svg>
+      出店者一覧
+    </h2>
+    <p class="section-lead wrap-phrase"><span>番号は出店マップの</span><span>番号に対応しています。</span></p>
+
+    <div class="vendor-list">
+      <div class="vendor-item"><span class="vendor-num">1</span><span class="vendor-name">Kitchen ナッシュカッツェ</span></div>
+      <div class="vendor-item"><span class="vendor-num">2</span><span class="vendor-name">Evergreen well-being Lab</span></div>
+      <div class="vendor-item"><span class="vendor-num">3</span><span class="vendor-name">百合台小学校吹奏楽部</span></div>
+      <div class="vendor-item"><span class="vendor-num">4</span><span class="vendor-name">ふきじまPTA</span></div>
+      <div class="vendor-item"><span class="vendor-num">5</span><span class="vendor-name">リリウム</span></div>
+      <div class="vendor-item"><span class="vendor-num">6</span><span class="vendor-name">AMYハンドメイド</span></div>
+      <div class="vendor-item"><span class="vendor-num">7</span><span class="vendor-name">八幡小BCC</span></div>
+      <div class="vendor-item"><span class="vendor-num">8</span><span class="vendor-name">平川レッドスターズ</span></div>
+      <div class="vendor-item"><span class="vendor-num">9</span><span class="vendor-name">百合台SC</span></div>
+      <div class="vendor-item"><span class="vendor-num">10</span><span class="vendor-name">百合台SC</span></div>
+      <div class="vendor-item"><span class="vendor-num">11</span><span class="vendor-name">居酒屋もーもー</span></div>
+      <div class="vendor-item"><span class="vendor-num">12</span><span class="vendor-name">曽谷縄文まつり実行委員会</span></div>
+      <div class="vendor-item"><span class="vendor-num">13</span><span class="vendor-name">曽谷連合子ども野球部</span></div>
+      <div class="vendor-item"><span class="vendor-num">14</span><span class="vendor-name">鳥ゆき（とりゆき）</span></div>
+      <div class="vendor-item"><span class="vendor-num">15</span><span class="vendor-name">市川てらこや</span></div>
+      <div class="vendor-item"><span class="vendor-num">16</span><span class="vendor-name">ボローニャ市川</span></div>
+      <div class="vendor-item"><span class="vendor-num">17</span><span class="vendor-name">ゆりのこ学級（SHOP）</span></div>
+      <div class="vendor-item"><span class="vendor-num">18</span><span class="vendor-name">おやの会（わなげ）</span></div>
+      <div class="vendor-item"><span class="vendor-num">19</span><span class="vendor-name">おやの会（パン）</span></div>
+      <div class="vendor-item"><span class="vendor-num">20</span><span class="vendor-name">おやの会（ラムネ）</span></div>
+      <div class="vendor-item"><span class="vendor-num">21</span><span class="vendor-name">TY MASTERS CAFÉ</span></div>
+      <div class="vendor-item"><span class="vendor-num">22</span><span class="vendor-name">ヒーロースタンド（キッチンカー）</span></div>
+      <div class="vendor-item"><span class="vendor-num">23</span><span class="vendor-name">NPO法人企画</span></div>
+      <div class="vendor-item"><span class="vendor-num">24</span><span class="vendor-name">カイジェラート</span></div>
+      <div class="vendor-item"><span class="vendor-num">25</span><span class="vendor-name">はんじょう亭</span></div>
+    </div>
+    <p class="disclaimer">※ 出店者・出店内容は現時点の予定であり、変更となる場合があります。</p>
   </div>
 </section>
 
