@@ -411,7 +411,7 @@
     justify-content: center;
     aspect-ratio: 2.3 / 1;
     padding: 0 2.5%;
-    background: var(--card);
+    background: #FFFFFF;
     border: 1px solid var(--line);
     border-radius: 8px;
     overflow: hidden;
@@ -443,7 +443,7 @@
     font-family: "Yu Mincho", "YuMincho", "Hiragino Mincho ProN", serif;
     font-size: 1.05rem;
     line-height: 1.2;
-    color: var(--ink);
+    color: #24313F;
     overflow-wrap: break-word;
   }
   .sponsor-desc { font-size: 0.85rem; color: var(--ink-soft); }
@@ -520,7 +520,7 @@
     font-weight: 900;
     font-size: 3.9rem;
     letter-spacing: 0.1em;
-    color: var(--ink);
+    color: #24313F;
     text-shadow: 0.5px 0.5px 0 rgba(0,0,0,0.15);
   }
   @media (max-width: 600px) {
@@ -604,7 +604,7 @@
   }
   .vendor-item {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     gap: 0.8rem;
     background: var(--card);
     border: 1px solid var(--line);
@@ -625,7 +625,9 @@
     font-weight: 700;
     font-size: 1rem;
   }
+  .vendor-item .vendor-info { display: flex; flex-direction: column; gap: 0.2rem; min-width: 0; padding-top: 0.15rem; }
   .vendor-item .vendor-name { font-size: 0.92rem; color: var(--ink); }
+  .vendor-item .vendor-desc { font-size: 0.8rem; color: var(--ink-soft); }
 
   /* ---------- Contact ---------- */
   #contact {
@@ -1068,50 +1070,34 @@
           <text x="400" y="538" text-anchor="middle" font-size="22" fill="var(--ink-soft)">校舎（立入禁止）</text>
         </g>
       </svg>
-      <p class="disclaimer">※ 会場配置図は「第6回百合フェス会場図」を基にしています。番号は下記の出店者一覧に対応しています。</p>
     </div>
-  </div>
-</section>
-
-<div class="bunting"></div>
-
-<section id="vendors">
-  <div class="section-inner">
-    <h2 class="section-title">
-      <svg class="title-icon" viewBox="0 0 32 32" aria-hidden="true">
-        <path d="M4,4 L16,4 L28,16 L16,28 L4,16 Z" fill="none" stroke="var(--vermillion)" stroke-width="2" stroke-linejoin="round" />
-        <circle cx="11" cy="11" r="2.5" fill="var(--gold-bright)" />
-      </svg>
-      出店者一覧
-    </h2>
-    <p class="section-lead wrap-phrase"><span>番号は出店マップの</span><span>番号に対応しています。</span></p>
 
     <div class="vendor-list">
-      <div class="vendor-item"><span class="vendor-num">1</span><span class="vendor-name">Kitchen ナッシュカッツェ</span></div>
-      <div class="vendor-item"><span class="vendor-num">2</span><span class="vendor-name">Evergreen well-being Lab</span></div>
-      <div class="vendor-item"><span class="vendor-num">3</span><span class="vendor-name">百合台小学校吹奏楽部</span></div>
-      <div class="vendor-item"><span class="vendor-num">4</span><span class="vendor-name">ふきじまPTA</span></div>
-      <div class="vendor-item"><span class="vendor-num">5</span><span class="vendor-name">リリウム</span></div>
-      <div class="vendor-item"><span class="vendor-num">6</span><span class="vendor-name">AMYハンドメイド</span></div>
-      <div class="vendor-item"><span class="vendor-num">7</span><span class="vendor-name">八幡小BCC</span></div>
-      <div class="vendor-item"><span class="vendor-num">8</span><span class="vendor-name">平川レッドスターズ</span></div>
-      <div class="vendor-item"><span class="vendor-num">9</span><span class="vendor-name">百合台SC</span></div>
-      <div class="vendor-item"><span class="vendor-num">10</span><span class="vendor-name">百合台SC</span></div>
-      <div class="vendor-item"><span class="vendor-num">11</span><span class="vendor-name">居酒屋もーもー</span></div>
-      <div class="vendor-item"><span class="vendor-num">12</span><span class="vendor-name">曽谷縄文まつり実行委員会</span></div>
-      <div class="vendor-item"><span class="vendor-num">13</span><span class="vendor-name">曽谷連合子ども野球部</span></div>
-      <div class="vendor-item"><span class="vendor-num">14</span><span class="vendor-name">鳥ゆき（とりゆき）</span></div>
-      <div class="vendor-item"><span class="vendor-num">15</span><span class="vendor-name">市川てらこや</span></div>
-      <div class="vendor-item"><span class="vendor-num">16</span><span class="vendor-name">ボローニャ市川</span></div>
-      <div class="vendor-item"><span class="vendor-num">17</span><span class="vendor-name">ゆりのこ学級（SHOP）</span></div>
-      <div class="vendor-item"><span class="vendor-num">18</span><span class="vendor-name">おやの会（わなげ）</span></div>
-      <div class="vendor-item"><span class="vendor-num">19</span><span class="vendor-name">おやの会（パン）</span></div>
-      <div class="vendor-item"><span class="vendor-num">20</span><span class="vendor-name">おやの会（ラムネ）</span></div>
-      <div class="vendor-item"><span class="vendor-num">21</span><span class="vendor-name">TY MASTERS CAFÉ</span></div>
-      <div class="vendor-item"><span class="vendor-num">22</span><span class="vendor-name">ヒーロースタンド（キッチンカー）</span></div>
-      <div class="vendor-item"><span class="vendor-num">23</span><span class="vendor-name">NPO法人企画</span></div>
-      <div class="vendor-item"><span class="vendor-num">24</span><span class="vendor-name">カイジェラート</span></div>
-      <div class="vendor-item"><span class="vendor-num">25</span><span class="vendor-name">はんじょう亭</span></div>
+      <div class="vendor-item"><span class="vendor-num">1</span><div class="vendor-info"><span class="vendor-name">Kitchen ナッシュカッツェ</span><span class="vendor-desc">焼きそば、ポテトフライ、唐揚げ</span></div></div>
+      <div class="vendor-item"><span class="vendor-num">2</span><div class="vendor-info"><span class="vendor-name">Evergreen well-being Lab</span><span class="vendor-desc">米粉焼き菓子、米粉パン、雑貨</span></div></div>
+      <div class="vendor-item"><span class="vendor-num">3</span><div class="vendor-info"><span class="vendor-name">百合台小学校吹奏楽部</span><span class="vendor-desc">内容未定</span></div></div>
+      <div class="vendor-item"><span class="vendor-num">4</span><div class="vendor-info"><span class="vendor-name">ふきじまPTA</span><span class="vendor-desc">スーパーボール</span></div></div>
+      <div class="vendor-item"><span class="vendor-num">5</span><div class="vendor-info"><span class="vendor-name">リリウム</span><span class="vendor-desc">バルーン、ハンドメイド作品、バザー品</span></div></div>
+      <div class="vendor-item"><span class="vendor-num">6</span><div class="vendor-info"><span class="vendor-name">AMYハンドメイド</span><span class="vendor-desc">UFOキャッチャー、ガチャガチャ、ハンドメイドワークショップ</span></div></div>
+      <div class="vendor-item"><span class="vendor-num">7</span><div class="vendor-info"><span class="vendor-name">八幡小BCC</span><span class="vendor-desc">型抜き、くじ引き、ガチャガチャ</span></div></div>
+      <div class="vendor-item"><span class="vendor-num">8</span><div class="vendor-info"><span class="vendor-name">平川レッドスターズ</span><span class="vendor-desc">飲料販売・アトラクション（内容未定）</span></div></div>
+      <div class="vendor-item"><span class="vendor-num">9</span><div class="vendor-info"><span class="vendor-name">百合台SC</span><span class="vendor-desc">くじ引き、ゲーム、飲料、食べ物</span></div></div>
+      <div class="vendor-item"><span class="vendor-num">10</span><div class="vendor-info"><span class="vendor-name">百合台SC</span><span class="vendor-desc">くじ引き、ゲーム、飲料、食べ物</span></div></div>
+      <div class="vendor-item"><span class="vendor-num">11</span><div class="vendor-info"><span class="vendor-name">居酒屋もーもー</span><span class="vendor-desc">型抜き</span></div></div>
+      <div class="vendor-item"><span class="vendor-num">12</span><div class="vendor-info"><span class="vendor-name">曽谷縄文まつり実行委員会</span><span class="vendor-desc">たこせん、飲み物</span></div></div>
+      <div class="vendor-item"><span class="vendor-num">13</span><div class="vendor-info"><span class="vendor-name">曽谷連合子ども野球部</span><span class="vendor-desc">飲み物（お酒、ジュース類）</span></div></div>
+      <div class="vendor-item"><span class="vendor-num">14</span><div class="vendor-info"><span class="vendor-name">鳥ゆき（とりゆき）</span><span class="vendor-desc">焼き鳥</span></div></div>
+      <div class="vendor-item"><span class="vendor-num">15</span><div class="vendor-info"><span class="vendor-name">市川てらこや</span><span class="vendor-desc">輪投げ・ヨーヨー釣り</span></div></div>
+      <div class="vendor-item"><span class="vendor-num">16</span><div class="vendor-info"><span class="vendor-name">ボローニャ市川</span><span class="vendor-desc">ボローニャデニッシュパン、ボローニャトースト</span></div></div>
+      <div class="vendor-item"><span class="vendor-num">17</span><div class="vendor-info"><span class="vendor-name">ゆりのこ学級（SHOP）</span><span class="vendor-desc">野菜、漬け物、ラスク、子ども用ゲーム</span></div></div>
+      <div class="vendor-item"><span class="vendor-num">18</span><div class="vendor-info"><span class="vendor-name">おやの会（わなげ）</span><span class="vendor-desc">わなげ</span></div></div>
+      <div class="vendor-item"><span class="vendor-num">19</span><div class="vendor-info"><span class="vendor-name">おやの会（パン）</span><span class="vendor-desc">パン</span></div></div>
+      <div class="vendor-item"><span class="vendor-num">20</span><div class="vendor-info"><span class="vendor-name">おやの会（ラムネ）</span><span class="vendor-desc">ラムネ</span></div></div>
+      <div class="vendor-item"><span class="vendor-num">21</span><div class="vendor-info"><span class="vendor-name">TY MASTERS CAFÉ</span><span class="vendor-desc">カラフルチョコバナナ、光るボトルドリンク、飲料</span></div></div>
+      <div class="vendor-item"><span class="vendor-num">22</span><div class="vendor-info"><span class="vendor-name">ヒーロースタンド（キッチンカー）</span><span class="vendor-desc">焼きそば、ポテト、チュロス、フランク、かき氷、ドリンク</span></div></div>
+      <div class="vendor-item"><span class="vendor-num">23</span><div class="vendor-info"><span class="vendor-name">NPO法人企画</span><span class="vendor-desc">内容未定</span></div></div>
+      <div class="vendor-item"><span class="vendor-num">24</span><div class="vendor-info"><span class="vendor-name">カイジェラート</span><span class="vendor-desc">アイス</span></div></div>
+      <div class="vendor-item"><span class="vendor-num">25</span><div class="vendor-info"><span class="vendor-name">はんじょう亭</span><span class="vendor-desc">ザンギ</span></div></div>
     </div>
     <p class="disclaimer">※ 出店者・出店内容は現時点の予定であり、変更となる場合があります。</p>
   </div>
